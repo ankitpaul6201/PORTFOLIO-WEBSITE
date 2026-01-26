@@ -296,6 +296,48 @@ export type Project = {
 };
 const projects: Project[] = [
   {
+    id: "college-expense-tracker",
+    category: "Finance & Utility",
+    title: "College Expense Tracker",
+    src: "/assets/projects-screenshots/expense-tracker-1.png",
+    screenshots: [
+      "/assets/projects-screenshots/expense-tracker-1.png",
+      "/assets/projects-screenshots/expense-tracker-2.png"
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.html,
+        PROJECT_SKILLS.css,
+        PROJECT_SKILLS.javascript,
+      ],
+      backend: [
+        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.netlify,
+      ],
+    },
+    live: "#",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A smart expense tracking application tailored for college students to manage their daily finances, semester budgets, and spending habits effectively.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/expense-tracker-1.png",
+              "/assets/projects-screenshots/expense-tracker-2.png",
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Smart Budgeting</TypographyH3>
+          <p className="font-mono mb-2">
+            Features include semester-wise tracking, visual spending breakdown, real-time balance updates, and efficient expense categorization.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
     id: "ai-object-detection",
     category: "AI & Computer Vision",
     title: "AI Object Detection System",
