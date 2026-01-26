@@ -31,6 +31,7 @@ const config = {
     github: "https://github.com/ankitpaul6201",
     linkedin: "https://www.linkedin.com/in/ankitpaul007/",
     instagram: "https://www.instagram.com/ankit._.jp/",
+    twitter: "",
   },
 };
 export { config };
