@@ -20,7 +20,7 @@ const config = {
     "Spline",
     "Framer Motion",
   ],
-  author: "Ankit",
+  author: "Ankit Paul",
   email: "ankitpaul9341@gmail.com",
   site: "https://ankitpaul6201.vercel.app",
 
