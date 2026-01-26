@@ -18,57 +18,12 @@ Welcome to the repository for my personal portfolio website! This is where I sho
 - **Animations**: GSAP, Framer Motion, Spline Runtime
 - **Misc**: Resend, Socketio, Zod
 
-## 🚀 Getting Started
-
 ### Prerequisites
 
 - Node.js (v14+)
 - npm or yarn
 
-### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/Naresh-Khatri/Portfolio.git
-    ```
-
-2. Navigate to the project directory:
-
-    ```bash
-    cd Portfolio
-    ```
-
-3. Install dependencies:
-
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-4. Run the development server:
-
-    ```bash
-    npm run dev
-    # or
-    yarn dev
-    ```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the magic!
-
-## 🚀 Deployment
-
-This site is deployed on Vercel. For your own deployment, follow these steps:
-
-1. Push your code to a GitHub repository.
-2. Connect your repository to Vercel.
-3. Vercel will handle the deployment process.
 
 ## 🤝 Contributing
 
 If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
