@@ -67,7 +67,8 @@ const AnimatedDiv = ({
   onClick: () => void;
   onCompleted: () => void;
 }) => {
-  const randY = getRandomHeight();
+  /* eslint-disable-next-line react-hooks/exhaustive-deps */
+  const [randY] = useState(() => getRandomHeight());
 
   const controls = useAnimationControls();
 
@@ -77,7 +78,7 @@ const AnimatedDiv = ({
       y: randY,
       transition: { duration: 5, ease: "linear" },
     });
-  }, [controls]);
+  }, [controls, randY]);
 
   const handlePause = () => {
     onClick();
@@ -91,6 +92,7 @@ const AnimatedDiv = ({
       onAnimationComplete={onCompleted}
       onClick={handlePause}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/assets/nyan-cat.gif"
         className={cn("fixed z-10 h-40 w-auto")}

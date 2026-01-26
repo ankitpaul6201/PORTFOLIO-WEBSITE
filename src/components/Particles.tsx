@@ -39,15 +39,15 @@ export default function Particles({
     return () => {
       window.removeEventListener("resize", initCanvas);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     onMouseMove();
-  }, [mousePosition.x, mousePosition.y]);
+  }, [mousePosition.x, mousePosition.y]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     initCanvas();
-  }, [refresh]);
+  }, [refresh]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const initCanvas = () => {
     resizeCanvas();
