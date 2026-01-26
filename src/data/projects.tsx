@@ -410,7 +410,7 @@ const projects: Project[] = [
           />
           <TypographyH3 className="my-4 mt-8">Context-Aware Correction</TypographyH3>
           <p className="font-mono mb-2">
-            Uses transformer-based language models to understand the writer's intent and provide relevant corrections. Helps improve writing clarity and professionalism.
+            Uses transformer-based language models to understand the writer&apos;s intent and provide relevant corrections. Helps improve writing clarity and professionalism.
           </p>
         </div>
       );
