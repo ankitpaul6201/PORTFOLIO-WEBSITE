@@ -315,7 +315,7 @@ const projects: Project[] = [
         PROJECT_SKILLS.netlify,
       ],
     },
-    live: "#",
+    live: "https://ankit-expense-tracker-buddy.netlify.app/",
     get content() {
       return (
         <div>
@@ -466,17 +466,8 @@ const projects: Project[] = [
     screenshots: [],
     live: "#",
     skills: {
-      frontend: [
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.framerMotion,
-      ],
-      backend: [
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.mongo,
-      ],
+      frontend: [],
+      backend: [],
     },
     get content() {
       return (
@@ -484,7 +475,7 @@ const projects: Project[] = [
           <TypographyP className="font-mono ">
             (Current Work in Progress) A comprehensive personal AI assistant designed to handle daily tasks, schedule management, and information retrieval. This project aims to integrate various AI services into a unified personal dashboard.
           </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
+
           <SlideShow
             images={[
               "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop",
