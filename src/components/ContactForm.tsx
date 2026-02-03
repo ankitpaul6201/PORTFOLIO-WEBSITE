@@ -52,7 +52,7 @@ const ContactForm = () => {
     } catch (err) {
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: err instanceof Error ? err.message : "Something went wrong! Please check the fields.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
