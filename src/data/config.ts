@@ -30,7 +30,7 @@ const config = {
   social: {
     github: "https://github.com/ankitpaul6201",
     linkedin: "https://www.linkedin.com/in/ankitpaul007/",
-    instagram: "https://www.instagram.com/ankit._.jp/",
+    instagram: "https://www.instagram.com/ankit.tsx/",
     twitter: "",
   },
 };
