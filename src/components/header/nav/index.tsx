@@ -4,7 +4,6 @@ import styles from "./style.module.scss";
 import { height } from "../anim";
 import Body from "./body/body";
 import Footer from "./footer/footer";
-import NavImage from "./image/image";
 import { links } from "@/components/header/config";
 import { cn } from "@/lib/utils";
 
@@ -41,11 +40,6 @@ const Index: React.FC<IndexProps> = ({ setIsActive }) => {
           />
           {/* <Footer /> */}
         </div>
-        <NavImage
-          src={links[selectedLink.index].thumbnail}
-          isActive={selectedLink.isActive}
-        />
-        {/* <p>{links[selectedLink.index].thumbnail}</p> */}
       </div>
     </motion.div>
   );
