@@ -26,6 +26,10 @@ import {
   SiThreedotjs,
   SiTypescript,
   SiVuedotjs,
+  SiKotlin,
+  SiAndroid,
+  SiCapacitor,
+  SiGooglechrome,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 const BASE_PATH = "/assets/projects-screenshots";
@@ -40,7 +44,7 @@ const ProjectsLinks = ({ live, repo }: { live: string; repo?: string }) => {
         href={live}
       >
         <Button variant={"default"} size={"sm"}>
-          Visit Website
+          Visit Project
           <ArrowUpRight className="ml-3 w-5 h-5" />
         </Button>
       </Link>
@@ -282,6 +286,42 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <span>🔥</span>,
   },
+  kotlin: {
+    title: "Kotlin",
+    bg: "black",
+    fg: "white",
+    icon: <SiKotlin />,
+  },
+  android: {
+    title: "Android",
+    bg: "black",
+    fg: "white",
+    icon: <SiAndroid />,
+  },
+  capacitor: {
+    title: "Capacitor",
+    bg: "black",
+    fg: "white",
+    icon: <SiCapacitor />,
+  },
+  chrome: {
+    title: "Chrome Extension",
+    bg: "black",
+    fg: "white",
+    icon: <SiGooglechrome />,
+  },
+  opencv: {
+    title: "OpenCV",
+    bg: "black",
+    fg: "white",
+    icon: <span>👁️</span>,
+  },
+  playwright: {
+    title: "Playwright",
+    bg: "black",
+    fg: "white",
+    icon: <span>🎭</span>,
+  },
 };
 export type Project = {
   id: string;
@@ -295,6 +335,172 @@ export type Project = {
   live: string;
 };
 const projects: Project[] = [
+  {
+    id: "jan-setu-ai",
+    category: "AI & Civic Tech",
+    title: "Jan Setu AI",
+    src: "/assets/projects-screenshots/jan_setu_ai.png",
+    screenshots: [
+      "/assets/projects-screenshots/jan_setu_ai.png"
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.kotlin,
+        PROJECT_SKILLS.android,
+      ],
+      backend: [
+        PROJECT_SKILLS.gemini,
+        PROJECT_SKILLS.python,
+      ],
+    },
+    github: "https://github.com/ankitpaul6201",
+    live: "https://ai.studio/apps/4da14abd-9564-4b9c-b193-caa830cbf1f4",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            An AI-powered civic issue reporting platform tailored for smart city community engagement. Jan Setu AI empowers citizens to capture, report, and automatically categorize local infrastructure issues (potholes, waste, water supply) using server-side Gemini AI for severity analysis and instant routing.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/jan_setu_ai.png",
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Smart Civic Issue Resolution</TypographyH3>
+          <p className="font-mono mb-2">
+            Features real-time location mapping, automated AI priority classification, Jetpack Compose Android UI, and seamless integration with municipal response workflows.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "kira-ai-agent",
+    category: "AI & Autonomous Systems",
+    title: "Kira AI Agent",
+    src: "/assets/projects-screenshots/kira_ai_agent.png",
+    screenshots: [
+      "/assets/projects-screenshots/kira_ai_agent.png"
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.opencv,
+      ],
+      backend: [
+        PROJECT_SKILLS.gemini,
+        PROJECT_SKILLS.fastapi,
+        PROJECT_SKILLS.playwright,
+      ],
+    },
+    github: "https://github.com/ankitpaul6201/Personal-Ai-Assistant",
+    live: "https://github.com/ankitpaul6201/Personal-Ai-Assistant",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A real-time conversational & visual autonomous AI desktop assistant. KIRA features Google Gemini Live API integration via bidirectional WebSockets, a cyberpunk PyQt6 HUD canvas with audio visualizers, OpenCV vision for camera/screen perception, system OS controls, and a secure HTTPS remote mobile dashboard.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/kira_ai_agent.png",
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Real-Time Autonomous Perception</TypographyH3>
+          <p className="font-mono mb-2">
+            Engineered with PyAudio PCM streaming, Playwright web automation, grounded multi-mode search, hardware telemetry monitoring (CPU/GPU/RAM), and end-to-end encrypted remote control.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "cp-vault",
+    category: "Developer Tools & Automation",
+    title: "CP-Vault",
+    src: "/assets/projects-screenshots/cp_vault.png",
+    screenshots: [
+      "/assets/projects-screenshots/cp_vault.png"
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.chrome,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+      ],
+    },
+    github: "https://github.com/ankitpaul6201/CP-VAULT",
+    live: "https://github.com/ankitpaul6201/CP-VAULT",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A Manifest V3 Chrome Extension that acts as your personal competitive programming archivist. Automatically extracts and commits accepted solutions from LeetCode, Codeforces, CodeChef, and HackerRank directly to your GitHub repository in atomic multi-file commits.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/cp_vault.png",
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Automated GitHub Solution Sync</TypographyH3>
+          <p className="font-mono mb-2">
+            Generates beautiful per-problem README documentation, tracks repository stats & streaks, provides duplicate detection via content hashing, and includes an offline retry queue.
+          </p>
+        </div>
+      );
+    },
+  },
+  {
+    id: "campus-buddy",
+    category: "Full-Stack & Mobile",
+    title: "Campus Buddy",
+    src: "/assets/projects-screenshots/campus_buddy.png",
+    screenshots: [
+      "/assets/projects-screenshots/campus_buddy.png"
+    ],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.react,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.capacitor,
+        PROJECT_SKILLS.framerMotion,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.mongo,
+      ],
+    },
+    github: "https://github.com/ankitpaul6201/Campus-Buddy",
+    live: "https://github.com/ankitpaul6201/Campus-Buddy",
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono ">
+            A mobile-first student campus marketplace app enabling college students to buy, sell, and discover essentials within their verified university community. Built as an Android app with React + Capacitor and Node.js + MongoDB.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <SlideShow
+            images={[
+              "/assets/projects-screenshots/campus_buddy.png",
+            ]}
+          />
+          <TypographyH3 className="my-4 mt-8">Peer-to-Peer Campus Marketplace</TypographyH3>
+          <p className="font-mono mb-2">
+            Includes JWT student authentication, Cloudinary photo uploads, in-app seller messaging, real-time notifications, saved wishlists, and smooth Framer Motion transitions.
+          </p>
+        </div>
+      );
+    },
+  },
   {
     id: "college-expense-tracker",
     category: "Finance & Utility",
